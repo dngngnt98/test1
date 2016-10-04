@@ -8,7 +8,7 @@
 
         <script>
             //간접호출 foo에 의해 bar가 호출 (델리게이트)
-            function foo()
+            function foo(callback)
             {
                 console.log("foo")
                 callback();
@@ -19,7 +19,12 @@
                 console.log("bar")
             }
             
+            function car()
+            {
+                console.log("car")
+            }
             foo(bar);
+            foo(car);
         </script>
 
     </body>
