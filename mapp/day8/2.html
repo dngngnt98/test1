@@ -1,0 +1,27 @@
+<html>
+    <head>
+
+    </head>
+    <body style="margin : 0px;">
+
+        <script>
+
+            //class foo{.......}
+            //foo *fooobj = new foo();
+
+            function foo()
+            {
+                console.log("hello constructor");
+            }
+
+            var bar = {};
+
+            bar.__proto__.constructor = foo; // 생성자 재정의
+
+            var _obj = new bar.constructor();
+            //var foo = {}; // 자바스크립트에서 오브젝트 생성?
+            //foo.age = 11;
+            //foo.name = "jim"
+        </script>
+    </body>
+</html>
