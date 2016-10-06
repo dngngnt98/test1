@@ -1,0 +1,30 @@
+<html>
+    <head>
+
+    </head>
+    <body style="margin : 0px;">
+
+        <script>
+            //var counter = 0;  전역변수 개나쁨(결과는 나옴)
+
+            function count(){
+                //var counter = 0; 이렇게 한 함수 안에서 활용되고 끝나는게 가장이상적인 함수
+                //return counter++;
+                var counter = 0;
+
+                //람다 함수 (이름이없는 한줄 짜리 함수) 
+                return function(){
+                    return counter++;
+                }
+                
+            }
+
+            var counter_closure = count();
+            console.log(counter_closure());
+            console.log(counter_closure());
+            //console.log(count());
+            //console.log(count());
+
+        </script>
+    </body>
+</html>
