@@ -13,7 +13,7 @@
             {
                 this.age = 12;
                 this.name = "jim";
-                
+
                 console.log("hello constructor");
             }
 
@@ -22,6 +22,8 @@
             bar.__proto__.constructor = foo; // 생성자 재정의
 
             var _obj = new bar.constructor();
+            var __ojb = new _obj();
+            console.log(_obj);
             //var foo = {}; // 자바스크립트에서 오브젝트 생성?
             //foo.age = 11;
             //foo.name = "jim"
