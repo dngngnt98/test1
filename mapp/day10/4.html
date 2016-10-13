@@ -1,0 +1,33 @@
+<html>
+    <head>
+    </head>
+
+    <body style - "margin : 0px;">
+        <script>
+            /*
+            var a ="value a";
+            (function() {
+                var b = "value b"
+            })();
+
+            console.log(a)
+            console.log(b) //없어진 변수
+            */
+
+            //var count = 0;
+            function counter(){
+                var count = 0;
+
+                //람다
+                return function(){
+                    count ++;
+                    return count;
+                }
+            }
+
+            var counter_closer = counter();
+            
+            //console.log(count);
+        </script>
+    </body>
+</html>
